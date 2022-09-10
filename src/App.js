@@ -1,9 +1,10 @@
 import {BrowserRoute,BrowserRouter,Route,Routes} from 'react-router-dom'
 import {Box} from '@mui/material'
 import {Navbar,VideoDetail,ChannelDetail,SearchFeed ,Feed} from './components'
+
 const App = () =>  (
-    
-    <BrowserRouter>
+  
+  <BrowserRouter>
     <Box sx={{backgroundColor:'#000'}}>
     <Navbar/>
     <Routes>
