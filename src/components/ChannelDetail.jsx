@@ -17,8 +17,6 @@ const ChannelDetail = () => {
     fetchFromAPI(`channels?part="snippet&id=${id}`).then((data) =>
       setChannelDetail(data?.items[0])
     );
-  //   fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data)=> setVideos(data.items))
-  // },[selectedCategory]);
     fetchFromAPI(`search?channelId=${id}&part=snippet%2Cid&order=date`).then((data) => setVideos(data?.items)
     );
   }, [id]);
@@ -34,7 +32,7 @@ const ChannelDetail = () => {
       zIndex: 10,
     }}
     />
-    // <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
+    <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
     </Box>
     <Box display="flex" p="2">
     <Box sx={{ mr: { sm: "100px" } }} />
